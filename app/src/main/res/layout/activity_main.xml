@@ -32,15 +32,15 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSIngUp" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSIgnUp" />
 
     <Button
-        android:id="@+id/buttonSingIn"
+        android:id="@+id/buttonSignIn"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:onClick="btnSingIn"
-        android:text="Sing In"
+        android:onClick="btnSignIn"
+        android:text="sign in"
         android:textColor="#0023E4"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,17 +49,17 @@
         app:layout_constraintTop_toBottomOf="@+id/Menu" />
 
     <Button
-        android:id="@+id/buttonSIngUp"
+        android:id="@+id/buttonSIgnUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="100dp"
-        android:onClick="btnSingUp"
-        android:text="Sing Up"
+        android:onClick="btnSignUp"
+        android:text="Sign Up"
         android:textColor="#0023E4"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSingIn" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

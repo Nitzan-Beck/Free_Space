@@ -14,12 +14,12 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void btnSingIn(View view) {
+    public void btnSignIn(View view) {
         Intent i=new Intent(this, SingIn.class);
         startActivity(i);
     }
 
-    public void btnSingUp(View view) {
+    public void btnSignUp(View view) {
         Intent i=new Intent(this, SingUp.class);
         startActivity(i);
     }

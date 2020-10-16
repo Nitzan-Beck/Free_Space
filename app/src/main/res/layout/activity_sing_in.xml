@@ -26,10 +26,11 @@
         android:layout_height="92dp"
         android:layout_marginTop="84dp"
         android:gravity="center"
-        android:text="Sing In"
+        android:text="Sign In"
         android:textColor="#FF0000"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.497"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -6,8 +6,22 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
+    <Button
+        android:id="@+id/buttonSIgnIn"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:onClick="btnSignIn"
+        android:text="Sign In"
+        android:textColor="#0023E4"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtMenu" />
+
     <TextView
-        android:id="@+id/Menu"
+        android:id="@+id/txtMenu"
         android:layout_width="317dp"
         android:layout_height="68dp"
         android:gravity="center"
@@ -35,20 +49,6 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonSIgnUp" />
 
     <Button
-        android:id="@+id/buttonSignIn"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:onClick="btnSignIn"
-        android:text="sign in"
-        android:textColor="#0023E4"
-        android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Menu" />
-
-    <Button
         android:id="@+id/buttonSIgnUp"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
@@ -60,6 +60,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonSignIn" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonSIgnIn" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

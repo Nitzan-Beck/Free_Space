@@ -6,4 +6,32 @@
     android:layout_height="match_parent"
     tools:context=".Admin">
 
+    <Button
+        android:id="@+id/buttonAdminLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="436dp"
+        android:gravity="center"
+        android:onClick="btnAdminLogout"
+        android:text="Logout"
+        android:textColor="#022170"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdmin" />
+
+    <TextView
+        android:id="@+id/txtAdmin"
+        android:layout_width="317dp"
+        android:layout_height="68dp"
+        android:gravity="center"
+        android:text="Admin"
+        android:textColor="#F80000"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
 </androidx.constraintlayout.widget.ConstraintLayout>

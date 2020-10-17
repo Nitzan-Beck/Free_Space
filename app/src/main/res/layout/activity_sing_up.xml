@@ -7,7 +7,7 @@
     tools:context=".SingUp">
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/txtSignUp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="92dp"
@@ -23,7 +23,7 @@
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="288dp"
+        android:layout_marginTop="368dp"
         android:onClick="btnSend"
         android:text="Send"
         android:textColor="#022170"
@@ -31,5 +31,5 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView3" />
+        app:layout_constraintTop_toBottomOf="@+id/txtSignUp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

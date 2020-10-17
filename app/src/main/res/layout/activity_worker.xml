@@ -6,13 +6,28 @@
     android:layout_height="match_parent"
     tools:context=".Worker">
 
+    <Button
+        android:id="@+id/buttonWorkerLogout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="384dp"
+        android:gravity="center"
+        android:onClick="btnWorkerLogout"
+        android:text="Logout"
+        android:textColor="#022170"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView" />
+
     <TextView
         android:id="@+id/textView"
         android:layout_width="242dp"
         android:layout_height="71dp"
         android:layout_marginTop="104dp"
         android:gravity="center"
-        android:text="Hellow worker!"
+        android:text=" Worker"
         android:textColor="#FA0202"
         android:textSize="35sp"
         app:layout_constraintEnd_toEndOf="parent"
@@ -20,19 +35,4 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <Button
-        android:id="@+id/button"
-        android:layout_width="113dp"
-        android:layout_height="39dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="84dp"
-        tools:layout_editor_absoluteY="261dp" />
-
-    <Button
-        android:id="@+id/button3"
-        android:layout_width="113dp"
-        android:layout_height="39dp"
-        android:text="Button"
-        tools:layout_editor_absoluteX="213dp"
-        tools:layout_editor_absoluteY="261dp" />
 </androidx.constraintlayout.widget.ConstraintLayout>

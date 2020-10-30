@@ -74,7 +74,7 @@
         android:id="@+id/DeletWorker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="28dp"
         android:text="Delet Worker"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/ChangeWorkerPlace"

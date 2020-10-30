@@ -10,16 +10,16 @@
         android:id="@+id/buttonAdminLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="436dp"
+        android:layout_marginTop="156dp"
         android:gravity="center"
         android:onClick="btnAdminLogout"
         android:text="Logout"
         android:textColor="#022170"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtAdmin" />
+        app:layout_constraintEnd_toEndOf="@+id/LookAsCEO"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/LookAsCEO"
+        app:layout_constraintTop_toBottomOf="@+id/LookAsCEO" />
 
     <TextView
         android:id="@+id/txtAdmin"
@@ -34,4 +34,28 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.095" />
+
+    <Button
+        android:id="@+id/DataBase"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:text="Go to Data base"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtAdmin"
+        app:layout_constraintHorizontal_bias="0.118"
+        app:layout_constraintStart_toStartOf="@+id/txtAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdmin" />
+
+    <Button
+        android:id="@+id/LookAsCEO"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="76dp"
+        android:text="Look As CEO"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/DataBase"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/DataBase"
+        app:layout_constraintTop_toBottomOf="@+id/DataBase" />
 </androidx.constraintlayout.widget.ConstraintLayout>

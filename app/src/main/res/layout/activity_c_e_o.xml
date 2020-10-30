@@ -59,26 +59,27 @@
         app:layout_constraintStart_toStartOf="@+id/ChooseBuilding"
         app:layout_constraintTop_toBottomOf="@+id/ChooseBuilding" />
 
-    <Button
-        android:id="@+id/CEOSerchWorker"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="Serch Worker"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/LookAsBoss"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/LookAsBoss"
-        app:layout_constraintTop_toBottomOf="@+id/LookAsBoss" />
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/CEOWorkerList"
         android:layout_width="282dp"
         android:layout_height="220dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginTop="24dp"
         app:layout_constraintEnd_toEndOf="@+id/CEOSerchWorker"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/CEOSerchWorker"
         app:layout_constraintTop_toBottomOf="@+id/CEOSerchWorker" />
+
+    <EditText
+        android:id="@+id/CEOSerchWorker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="textPersonName"
+        android:text="Enter worker name"
+        app:layout_constraintEnd_toEndOf="@+id/LookAsBoss"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/LookAsBoss"
+        app:layout_constraintTop_toBottomOf="@+id/LookAsBoss" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

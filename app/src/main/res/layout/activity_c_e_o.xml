@@ -10,12 +10,13 @@
         android:id="@+id/txtCEO"
         android:layout_width="317dp"
         android:layout_height="68dp"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="44dp"
         android:gravity="center"
         android:text="CEO"
         android:textColor="#F80000"
         android:textSize="50sp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -23,14 +24,61 @@
         android:id="@+id/buttonCEOLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="404dp"
+        android:layout_marginTop="36dp"
         android:gravity="center"
         android:onClick="btnCEOLogout"
         android:text="Logout"
         android:textColor="#022170"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/CEOWorkerList"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="@+id/CEOWorkerList"
+        app:layout_constraintTop_toBottomOf="@+id/CEOWorkerList" />
+
+    <Button
+        android:id="@+id/ChooseBuilding"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="44dp"
+        android:text="Choose Building"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/txtCEO"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/txtCEO"
         app:layout_constraintTop_toBottomOf="@+id/txtCEO" />
+
+    <Button
+        android:id="@+id/LookAsBoss"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Look As Boss"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/ChooseBuilding"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/ChooseBuilding"
+        app:layout_constraintTop_toBottomOf="@+id/ChooseBuilding" />
+
+    <Button
+        android:id="@+id/CEOSerchWorker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Serch Worker"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="@+id/LookAsBoss"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/LookAsBoss"
+        app:layout_constraintTop_toBottomOf="@+id/LookAsBoss" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/CEOWorkerList"
+        android:layout_width="282dp"
+        android:layout_height="220dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintEnd_toEndOf="@+id/CEOSerchWorker"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/CEOSerchWorker"
+        app:layout_constraintTop_toBottomOf="@+id/CEOSerchWorker" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

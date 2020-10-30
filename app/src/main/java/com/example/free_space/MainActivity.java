@@ -10,35 +10,16 @@ import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
     Button btn;
-    @Override
+    //@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
-        btn=(Button) findViewById(R.id.buttonSIgnIn);
-        btn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                final Dialog SignInDialog=new Dialog(MainActivity.this);
-                SignInDialog.setContentView(R.layout.sign_in_dialog);
-                Button btn2;
-                btn2=(Button) SignInDialog.findViewById(R.id.submit);
-                btn2.setOnClickListener(new View.OnClickListener() {
-                  @Override
-                  public void onClick(View v) {
-                   SignInDialog.dismiss();
-                  }
-                });
-
-                SignInDialog.show();
-
-            }
-        });
+       setContentView(R.layout.activity_main);
     }
 
-    //public void btnSignIn(View view) {
-      //  Intent i=new Intent(this, SingIn.class);
-        //startActivity(i);
-    //}
+    public void btnSignIn(View view) {
+        Intent i=new Intent(this, SingIn.class);
+        startActivity(i);
+    }
 
 
     public void btnSignUp(View view) {

@@ -41,8 +41,8 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="40dp"
         android:ems="10"
+        android:hint="Enter worker  name"
         android:inputType="textPersonName"
-        android:text="Enter worker  name"
         app:layout_constraintEnd_toEndOf="@+id/textView"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView"
@@ -54,12 +54,12 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="28dp"
         android:ems="10"
+        android:hint="Enter room number"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/SerchWorkerName"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/SerchWorkerName"
-        app:layout_constraintTop_toBottomOf="@+id/SerchWorkerName"
-        tools:text="Enter room number" />
+        app:layout_constraintTop_toBottomOf="@+id/SerchWorkerName" />
 
     <ListView
         android:id="@+id/WorkerList"

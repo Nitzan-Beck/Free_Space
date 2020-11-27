@@ -13,7 +13,7 @@
         <activity android:name=".SingIn" />
         <activity android:name=".Settings" />
         <activity android:name=".CEO" />
-        <activity android:name=".Admin" />
+        <activity android:name=".Admin" ></activity>
         <activity android:name=".Boss" />
         <activity android:name=".Worker" />
         <activity android:name=".MainActivity">

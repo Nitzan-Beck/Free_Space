@@ -48,11 +48,11 @@
         app:layout_constraintTop_toBottomOf="@+id/txtCEO" />
 
     <Button
-        android:id="@+id/LookAsBoss"
+        android:id="@+id/LookAs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="20dp"
-        android:text="Look As Boss"
+        android:text="Look As...."
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/ChooseBuilding"
         app:layout_constraintHorizontal_bias="0.0"
@@ -77,9 +77,9 @@
         android:ems="10"
         android:hint="Enter worker name"
         android:inputType="textPersonName"
-        app:layout_constraintEnd_toEndOf="@+id/LookAsBoss"
+        app:layout_constraintEnd_toEndOf="@+id/LookAs"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/LookAsBoss"
-        app:layout_constraintTop_toBottomOf="@+id/LookAsBoss" />
+        app:layout_constraintStart_toStartOf="@+id/LookAs"
+        app:layout_constraintTop_toBottomOf="@+id/LookAs" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

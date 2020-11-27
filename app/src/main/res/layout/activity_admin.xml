@@ -16,10 +16,10 @@
         android:text="Logout"
         android:textColor="#022170"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/LookAsCEO"
+        app:layout_constraintEnd_toEndOf="@+id/LookAs"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/LookAsCEO"
-        app:layout_constraintTop_toBottomOf="@+id/LookAsCEO" />
+        app:layout_constraintStart_toStartOf="@+id/LookAs"
+        app:layout_constraintTop_toBottomOf="@+id/LookAs" />
 
     <TextView
         android:id="@+id/txtAdmin"
@@ -48,11 +48,11 @@
         app:layout_constraintTop_toBottomOf="@+id/txtAdmin" />
 
     <Button
-        android:id="@+id/LookAsCEO"
+        android:id="@+id/LookAs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="76dp"
-        android:text="Look As CEO"
+        android:text="Look As....."
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/DataBase"
         app:layout_constraintHorizontal_bias="0.0"

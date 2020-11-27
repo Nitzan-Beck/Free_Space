@@ -18,4 +18,9 @@ public class Boss extends AppCompatActivity {
         Intent i=new Intent(this,MainActivity.class);
         startActivity(i);
     }
+
+    public void LookAsWorker(View view) {
+        Intent i=new Intent(this,Worker.class);
+        startActivity(i);
+    }
 }

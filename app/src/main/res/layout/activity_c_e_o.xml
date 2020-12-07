@@ -24,16 +24,16 @@
         android:id="@+id/buttonCEOLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="40dp"
         android:gravity="center"
         android:onClick="btnCEOLogout"
         android:text="Logout"
         android:textColor="#022170"
         android:textSize="24sp"
-        app:layout_constraintEnd_toEndOf="@+id/CEOWorkerList"
-        app:layout_constraintHorizontal_bias="0.367"
-        app:layout_constraintStart_toStartOf="@+id/CEOWorkerList"
-        app:layout_constraintTop_toBottomOf="@+id/CEOWorkerList" />
+        app:layout_constraintEnd_toEndOf="@+id/ListViewFromCEO"
+        app:layout_constraintHorizontal_bias="0.49"
+        app:layout_constraintStart_toStartOf="@+id/ListViewFromCEO"
+        app:layout_constraintTop_toBottomOf="@+id/ListViewFromCEO" />
 
     <Button
         android:id="@+id/ChooseBuilding"
@@ -59,13 +59,13 @@
         app:layout_constraintStart_toStartOf="@+id/ChooseBuilding"
         app:layout_constraintTop_toBottomOf="@+id/ChooseBuilding" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/CEOWorkerList"
-        android:layout_width="282dp"
-        android:layout_height="220dp"
-        android:layout_marginTop="24dp"
+    <ListView
+        android:id="@+id/ListViewFromCEO"
+        android:layout_width="326dp"
+        android:layout_height="214dp"
+        android:layout_marginTop="20dp"
         app:layout_constraintEnd_toEndOf="@+id/CEOSerchWorker"
-        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintHorizontal_bias="0.077"
         app:layout_constraintStart_toStartOf="@+id/CEOSerchWorker"
         app:layout_constraintTop_toBottomOf="@+id/CEOSerchWorker" />
 
@@ -73,7 +73,7 @@
         android:id="@+id/CEOSerchWorker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="36dp"
         android:ems="10"
         android:hint="Enter worker name"
         android:inputType="textPersonName"

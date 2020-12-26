@@ -7,8 +7,8 @@ public class WorkerItem {
 
     public WorkerItem(String name, int roomNum, String email) {
         this.name = name;
-        RoomNum = roomNum;
-        Email = email;
+       this.RoomNum = roomNum;
+        this.Email = email;
     }
 
     public String getName() {

@@ -10,22 +10,21 @@
         android:id="@+id/buttonWorkerLogout"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="20dp"
         android:gravity="center"
         android:onClick="btnWorkerLogout"
         android:text="Logout"
         android:textColor="#022170"
         android:textSize="24sp"
         app:layout_constraintEnd_toEndOf="@+id/WorkerList"
-        app:layout_constraintHorizontal_bias="0.171"
-        app:layout_constraintStart_toStartOf="@+id/WorkerList"
         app:layout_constraintTop_toBottomOf="@+id/WorkerList" />
 
     <TextView
         android:id="@+id/textView"
         android:layout_width="242dp"
         android:layout_height="71dp"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="28dp"
         android:gravity="center"
         android:text=" Worker"
         android:textColor="#FA0202"
@@ -39,7 +38,7 @@
         android:id="@+id/SerchWorkerName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Enter worker  name"
         android:inputType="textPersonName"
@@ -70,5 +69,20 @@
         app:layout_constraintHorizontal_bias="0.336"
         app:layout_constraintStart_toStartOf="@+id/RoomNum"
         app:layout_constraintTop_toBottomOf="@+id/RoomNum" />
+
+    <Button
+        android:id="@+id/Search"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="16dp"
+        android:onClick="SearchBtn"
+        android:text="Search"
+        android:textColor="#022170"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toStartOf="@+id/buttonWorkerLogout"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/WorkerList"
+        app:layout_constraintTop_toBottomOf="@+id/WorkerList" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

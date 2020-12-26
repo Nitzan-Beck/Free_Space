@@ -21,26 +21,30 @@ public class WorkerAdapter extends ArrayAdapter<WorkerItem> {
     private Context ctx;
     private int WorkerResourcedID;
     private List<WorkerItem> data;
-    public WorkerAdapter(@NonNull Context context, int resource, @NonNull List<WorkerItem> objects) {
+    public WorkerAdapter( Context context, int resource,  List<WorkerItem> objects) {
         super(context, resource, objects);
+        this.ctx=(Worker)context;
+        this.WorkerResourcedID=resource;
+        this.data=objects;
     }
-
-    public int getcount(){
-        return data.size();
-    }
-
-    @NonNull
     @Override
-    public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
+    public int getCount(){ return data.size();}
+
+
+    @Override
+    public View getView(int position,  View convertView,  ViewGroup parent) {
         LayoutInflater li=(LayoutInflater)this.ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         View v =li.inflate(this.WorkerResourcedID, null);
         WorkerItem wi=this.data.get(position);
         TextView tv1=v.findViewById(R.id.WorkerNameItem);
-        tv1.setText(wi.getName());
+        String s="Worker name: "+wi.getName();
+        tv1.setText(s);
         TextView tv2=v.findViewById(R.id.NumberRoomItem);
-        tv2.setText(wi.getName());
+        String s1="Worker's room number: "+wi.getRoomNum();
+        tv2.setText(s1);
         TextView tv3=v.findViewById(R.id.EmailItem);
-        tv3.setText(wi.getName());
+        String s2="Worker's Email:  "+wi.getRoomNum();
+        tv3.setText(s2);
         return  v;
     }
 }

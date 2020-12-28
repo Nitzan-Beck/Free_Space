@@ -5,9 +5,13 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.EditText;
+import android.widget.Toast;
 
 public class SingUp extends AppCompatActivity {
-
+    private EditText name;
+    private EditText pass;
+    private  EditText Email;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -15,6 +19,7 @@ public class SingUp extends AppCompatActivity {
     }
 
     public void btnSend(View view) {
+        Toast.makeText(this,"Name: "+ name.getText()+", Password: "+ pass.getText(),Toast.LENGTH_LONG).show();
 
     }
 

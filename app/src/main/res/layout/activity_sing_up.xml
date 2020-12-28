@@ -23,22 +23,21 @@
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
         android:onClick="btnSend"
         android:text="Send"
         android:textAllCaps="false"
         android:textColor="#022170"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/NewUserEmail"
+        app:layout_constraintEnd_toStartOf="@+id/Back"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/NewUserEmail"
-        app:layout_constraintTop_toBottomOf="@+id/NewUserEmail" />
+        app:layout_constraintStart_toStartOf="@+id/NewUserBuldingNum"
+        app:layout_constraintTop_toTopOf="@+id/Back" />
 
     <EditText
         android:id="@+id/NewUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="52dp"
+        android:layout_marginTop="40dp"
         android:ems="10"
         android:hint="Enter your username"
         android:inputType="textPersonName"
@@ -48,19 +47,6 @@
         app:layout_constraintTop_toBottomOf="@+id/txtSignUp" />
 
     <EditText
-        android:id="@+id/UserPassword"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="44dp"
-        android:ems="10"
-        android:hint="Enter your password"
-        android:inputType="numberPassword"
-        app:layout_constraintEnd_toEndOf="@+id/NewUserName"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/NewUserName"
-        app:layout_constraintTop_toBottomOf="@+id/NewUserName" />
-
-    <EditText
         android:id="@+id/NewUserEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -68,23 +54,46 @@
         android:ems="10"
         android:hint="Enter your email"
         android:inputType="textEmailAddress"
-        app:layout_constraintEnd_toEndOf="@+id/UserPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/UserPassword"
-        app:layout_constraintTop_toBottomOf="@+id/UserPassword" />
+        app:layout_constraintEnd_toEndOf="@+id/NewUserPassword"
+        app:layout_constraintStart_toStartOf="@+id/NewUserPassword"
+        app:layout_constraintTop_toBottomOf="@+id/NewUserPassword" />
 
     <Button
         android:id="@+id/Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="64dp"
+        android:layout_marginTop="68dp"
         android:onClick="GoBack"
         android:text="Back"
         android:textAllCaps="false"
         android:textColor="#022170"
         android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/NewUserBuldingNum"
+        app:layout_constraintTop_toBottomOf="@+id/NewUserBuldingNum" />
+
+    <EditText
+        android:id="@+id/NewUserBuldingNum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Enter Bilding number"
+        android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/NewUserEmail"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toEndOf="@+id/buttonSend"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/NewUserEmail"
         app:layout_constraintTop_toBottomOf="@+id/NewUserEmail" />
+
+    <EditText
+        android:id="@+id/NewUserPassword"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:ems="10"
+        android:hint="Enter your password"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/NewUserName"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/NewUserName"
+        app:layout_constraintTop_toBottomOf="@+id/NewUserName" />
 </androidx.constraintlayout.widget.ConstraintLayout>

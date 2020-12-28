@@ -24,8 +24,7 @@ public class SingUp extends AppCompatActivity {
     }
 
     public void btnSend(View view) {
-        Toast.makeText(this,"Name: "+ name.getText()+", Password: "+ pass.getText(),Toast.LENGTH_LONG).show();
-
+        Toast.makeText(this,"Name: "+ name.getText()+", Password: "+ pass.getText()+", email: "+ email.getText()+", Building number: "+BN.getText(),Toast.LENGTH_LONG).show();
     }
 
     public void GoBack(View view) {

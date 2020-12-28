@@ -9,14 +9,26 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.ListView;
+
+import java.util.ArrayList;
 
 public class CEO extends AppCompatActivity {
+    private ListView WorkerList;
+    private ArrayList<WorkerItem> arrayList;
+    private EditText Name;
+
     Button btnLookAs;
     String[] s={"look as worker", "Look as boss"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_c_e_o);
+        Name=findViewById(R.id.CEOSerchWorker);
+        this.arrayList = new ArrayList<WorkerItem>();
+        WorkerList=findViewById(R.id.ListViewFromCEO);
+        getWrokerData();
         btnLookAs=findViewById(R.id.LookAs);
         btnLookAs.setOnClickListener(btnLookAsListener);
     }
@@ -46,5 +58,9 @@ public class CEO extends AppCompatActivity {
     public void btnCEOLogout(View view) {
         Intent i=new Intent(this,MainActivity.class);
         startActivity(i);
+    }
+
+    public void Cerch(View view) {
+
     }
 }

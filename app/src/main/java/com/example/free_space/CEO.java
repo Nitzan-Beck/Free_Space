@@ -11,6 +11,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
+import android.widget.Toast;
 
 import java.util.ArrayList;
 
@@ -69,6 +70,26 @@ public class CEO extends AppCompatActivity {
         arrayList.add(wi);
     }
     public void Cerch(View view) {
+        ArrayList<WorkerItem> temp=new ArrayList<WorkerItem>();
+        ArrayList<WorkerItem> temp1=new ArrayList<WorkerItem>(this.arrayList);
+        String name =String.valueOf(Name.getText());
+        if (!String.valueOf(Name.getText()).equals("")){
+            for (int i=0; i<temp1.size();i++)
+            {
+                if (name.equals(temp1.get(i).getName()))
+                {
+                    temp.add(temp1.remove(i));
+                }
+                else {
+                    Toast.makeText(this,"you search a name that not exists",Toast.LENGTH_LONG).show();
+                }
+            }
+        }
+        else  {
+            Toast.makeText(this,"you did not search anything",Toast.LENGTH_LONG).show();
+        }
+        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp);
+        WorkerList.setAdapter(wa);
 
     }
 }

@@ -23,9 +23,10 @@
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="104dp"
+        android:layout_marginTop="64dp"
         android:onClick="btnSend"
         android:text="Send"
+        android:textAllCaps="false"
         android:textColor="#022170"
         android:textSize="30sp"
         app:layout_constraintEnd_toEndOf="@+id/NewUserEmail"
@@ -71,4 +72,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/UserPassword"
         app:layout_constraintTop_toBottomOf="@+id/UserPassword" />
+
+    <Button
+        android:id="@+id/Back"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="64dp"
+        android:onClick="GoBack"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="#022170"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/NewUserEmail"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/buttonSend"
+        app:layout_constraintTop_toBottomOf="@+id/NewUserEmail" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -15,6 +15,10 @@ public class SingUp extends AppCompatActivity {
     }
 
     public void btnSend(View view) {
+
+    }
+
+    public void GoBack(View view) {
         Intent i=new Intent(this,MainActivity.class);
         startActivity(i);
     }

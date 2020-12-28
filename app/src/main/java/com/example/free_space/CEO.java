@@ -29,6 +29,9 @@ public class CEO extends AppCompatActivity {
         this.arrayList = new ArrayList<WorkerItem>();
         WorkerList=findViewById(R.id.ListViewFromCEO);
         getWrokerData();
+        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, arrayList);
+        WorkerList.setAdapter(wa);
+
         btnLookAs=findViewById(R.id.LookAs);
         btnLookAs.setOnClickListener(btnLookAsListener);
     }
@@ -59,7 +62,12 @@ public class CEO extends AppCompatActivity {
         Intent i=new Intent(this,MainActivity.class);
         startActivity(i);
     }
-
+    public void getWrokerData() {
+        WorkerItem wi = new WorkerItem("name1", 1, "Email1");
+        arrayList.add(wi);
+        wi = new WorkerItem("name2", 2, "Email2");
+        arrayList.add(wi);
+    }
     public void Cerch(View view) {
 
     }

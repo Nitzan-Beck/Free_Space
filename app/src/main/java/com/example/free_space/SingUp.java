@@ -11,11 +11,16 @@ import android.widget.Toast;
 public class SingUp extends AppCompatActivity {
     private EditText name;
     private EditText pass;
-    private  EditText Email;
+    private  EditText email;
+    private EditText BN;//Building number
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sing_up);
+        name=findViewById(R.id.NewUserName);
+        pass=findViewById(R.id.NewUserPassword);
+        email=findViewById(R.id.NewUserEmail);
+        BN=findViewById(R.id.NewUserBuildingNum);
     }
 
     public void btnSend(View view) {

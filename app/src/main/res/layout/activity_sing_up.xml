@@ -30,7 +30,7 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/Back"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/NewUserBuldingNum"
+        app:layout_constraintStart_toStartOf="@+id/NewUserBuildingNum"
         app:layout_constraintTop_toTopOf="@+id/Back" />
 
     <EditText
@@ -68,16 +68,16 @@
         android:textAllCaps="false"
         android:textColor="#022170"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/NewUserBuldingNum"
-        app:layout_constraintTop_toBottomOf="@+id/NewUserBuldingNum" />
+        app:layout_constraintEnd_toEndOf="@+id/NewUserBuildingNum"
+        app:layout_constraintTop_toBottomOf="@+id/NewUserBuildingNum" />
 
     <EditText
-        android:id="@+id/NewUserBuldingNum"
+        android:id="@+id/NewUserBuildingNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="36dp"
         android:ems="10"
-        android:hint="Enter Bilding number"
+        android:hint="Enter Building number"
         android:inputType="number"
         app:layout_constraintEnd_toEndOf="@+id/NewUserEmail"
         app:layout_constraintHorizontal_bias="0.0"

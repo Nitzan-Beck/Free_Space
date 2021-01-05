@@ -20,7 +20,7 @@ public class CEO extends AppCompatActivity {
     private ArrayList<WorkerItem> arrayList;
     private EditText Name;
 
-    Button btnLookAs;
+    private Button btnLookAs;
     String[] s={"look as worker", "Look as boss"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,7 +30,7 @@ public class CEO extends AppCompatActivity {
         this.arrayList = new ArrayList<WorkerItem>();
         WorkerList=findViewById(R.id.ListViewFromCEO);
         getWrokerData();
-        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, arrayList);
+        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, arrayList,true);
         WorkerList.setAdapter(wa);
 
         btnLookAs=findViewById(R.id.LookAs);
@@ -88,7 +88,7 @@ public class CEO extends AppCompatActivity {
         else  {
             Toast.makeText(this,"you did not search anything",Toast.LENGTH_LONG).show();
         }
-        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp);
+        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp, true);
         WorkerList.setAdapter(wa);
 
     }

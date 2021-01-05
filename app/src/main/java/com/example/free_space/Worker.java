@@ -30,7 +30,7 @@ public class Worker extends AppCompatActivity {
         this.arrayList = new ArrayList<WorkerItem>();
         WorkerList=findViewById(R.id.WorkerList);
         getWrokerData();
-        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, arrayList);
+        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, arrayList,false);
         WorkerList.setAdapter(wa);
     }
 
@@ -80,7 +80,7 @@ public class Worker extends AppCompatActivity {
         if(String.valueOf(Room.getText()).equals("")&& String.valueOf(Name.getText()).equals("")) {
             Toast.makeText(this,"you did not search anything",Toast.LENGTH_LONG).show();
         }
-            WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp);
+            WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp, false);
             WorkerList.setAdapter(wa);
     }
 }

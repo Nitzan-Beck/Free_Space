@@ -21,9 +21,15 @@ public class WorkerAdapter extends ArrayAdapter<WorkerItem> {
     private Context ctx;
     private int WorkerResourcedID;
     private List<WorkerItem> data;
-    public WorkerAdapter( Context context, int resource,  List<WorkerItem> objects) {
+    public WorkerAdapter( Context context, int resource,  List<WorkerItem> objects,boolean src) {
+        //if src=falls it is worker else it is CEO
         super(context, resource, objects);
-        this.ctx=(Worker)context;
+        if (src) {
+            this.ctx=(CEO)context;
+        }
+        else {
+            this.ctx=(Worker)context;
+        }
         this.WorkerResourcedID=resource;
         this.data=objects;
     }

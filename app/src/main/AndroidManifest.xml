@@ -13,15 +13,17 @@
         <activity android:name=".SingIn" />
         <activity android:name=".Settings" />
         <activity android:name=".CEO" >
+
+        </activity>
+        <activity android:name=".Admin" />
+        <activity android:name=".Boss" />
+        <activity android:name=".Worker" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-        </activity>
-        <activity android:name=".Admin" />
-        <activity android:name=".Boss" />
-        <activity android:name=".Worker" />
+        </activity>>
         <activity android:name=".MainActivity">
 
         </activity>

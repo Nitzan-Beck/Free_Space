@@ -87,7 +87,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="24dp"
-        android:onClick="Cerch"
+        android:onClick="Serch"
         android:text="Serch"
         android:textColor="#022170"
         android:textSize="24sp"

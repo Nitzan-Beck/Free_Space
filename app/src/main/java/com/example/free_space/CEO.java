@@ -69,7 +69,8 @@ public class CEO extends AppCompatActivity {
         wi = new WorkerItem("name2", 2, "Email2");
         arrayList.add(wi);
     }
-    public void Cerch(View view) {
+    public void Serch(View view) {
+        boolean foundName=false;
         ArrayList<WorkerItem> temp=new ArrayList<WorkerItem>();
         ArrayList<WorkerItem> temp1=new ArrayList<WorkerItem>(this.arrayList);
         String name =String.valueOf(Name.getText());
@@ -79,11 +80,12 @@ public class CEO extends AppCompatActivity {
                 if (name.equals(temp1.get(i).getName()))
                 {
                     temp.add(temp1.remove(i));
-                }
-                else {
-                    Toast.makeText(this,"you search a name that not exists",Toast.LENGTH_LONG).show();
+                    foundName=true;
                 }
             }
+                if(!foundName) {
+                    Toast.makeText(this,"you search a name that not exists",Toast.LENGTH_LONG).show();
+                }
         }
         else  {
             Toast.makeText(this,"you did not search anything",Toast.LENGTH_LONG).show();

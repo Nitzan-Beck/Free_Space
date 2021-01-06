@@ -49,6 +49,7 @@ public class Worker extends AppCompatActivity {
     }
 
     public void SearchBtn(View view) {
+        boolean foundName=false,foundroom=false;
         ArrayList<WorkerItem> temp=new ArrayList<WorkerItem>();
         ArrayList<WorkerItem> temp1=new ArrayList<WorkerItem>(this.arrayList);
         String name =String.valueOf(Name.getText());
@@ -59,10 +60,11 @@ public class Worker extends AppCompatActivity {
                 if (name.equals(temp1.get(i).getName()))
                 {
                     temp.add(temp1.remove(i));
+                    foundName=true;
                 }
-                else {
+            }
+            if (!foundName){
                     Toast.makeText(this,"you search a name that not exists",Toast.LENGTH_LONG).show();
-                }
             }
         }
         if (!String.valueOf(Room.getText()).equals("")){
@@ -71,15 +73,16 @@ public class Worker extends AppCompatActivity {
                 if (String.valueOf(Room.getText()).equals (String.valueOf(temp1.get(i).getRoomNum())))
                 {
                     temp.add(temp1.remove(i));
-                }
-                else {
-                    Toast.makeText(this,"you search a room number that not exists",Toast.LENGTH_LONG).show();
+                    foundroom=true;
                 }
             }
+                if(!foundroom) {
+                    Toast.makeText(this,"you search a room number that not exists",Toast.LENGTH_LONG).show();
+                }
         }
-        if(String.valueOf(Room.getText()).equals("")&& String.valueOf(Name.getText()).equals("")) {
-            Toast.makeText(this,"you did not search anything",Toast.LENGTH_LONG).show();
-        }
+            if(String.valueOf(Room.getText()).equals("")&& String.valueOf(Name.getText()).equals("")) {
+              Toast.makeText(this,"you did not search anything",Toast.LENGTH_LONG).show();
+            }
             WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp, false);
             WorkerList.setAdapter(wa);
     }

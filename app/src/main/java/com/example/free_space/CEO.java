@@ -14,11 +14,13 @@ import android.widget.ListView;
 import android.widget.Toast;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class CEO extends AppCompatActivity {
     private ListView WorkerList;
     private ArrayList<WorkerItem> arrayList;
     private EditText Name;
+    HashMap<String, Boolean> bMap=new HashMap<String, Boolean>();
 
     private Button btnLookAs;
     String[] s={"look as worker", "Look as boss"};
@@ -35,6 +37,13 @@ public class CEO extends AppCompatActivity {
 
         btnLookAs=findViewById(R.id.LookAs);
         btnLookAs.setOnClickListener(btnLookAsListener);
+
+
+        bMap.put("Building1",true);
+        bMap.put("Building2",true);
+        bMap.put("Building3",true);
+        bMap.put("Building4",true);
+
     }
     private View.OnClickListener btnLookAsListener=new View.OnClickListener() {
         @Override
@@ -93,5 +102,43 @@ public class CEO extends AppCompatActivity {
         WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp, true);
         WorkerList.setAdapter(wa);
 
+    }
+
+    public void ChooseBuilding(View view) {
+        final String[] stArry= bMap.keySet().toArray(new String[0]);//נבנה על בסיס המפתחות של הדיאלוג
+        boolean [] boolArry=new boolean[bMap.size()];// נבנה על בסיס הערכים הבוליאנים של המפתחות
+
+        for (int i=0; i>stArry.length;i++)
+        {
+            boolArry[i]=bMap.get(stArry[i]);
+        }
+        AlertDialog.Builder BuildingList= new AlertDialog.Builder(this);
+        BuildingList.setTitle("choose buildings");
+        BuildingList.setMultiChoiceItems(stArry, boolArry, new DialogInterface.OnMultiChoiceClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which, boolean isChecked) {
+                bMap.put(stArry[which], isChecked);
+            }
+        });
+        BuildingList.setPositiveButton("serch", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                displayAllBuildings();
+            }
+        });
+        BuildingList.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                Toast.makeText(CEO.this,"you didn't do anything",Toast.LENGTH_LONG).show();
+            }
+        });
+    }
+    public void displayAllBuildings()
+    {
+        final String[] stArry=bMap.keySet().toArray(new String[0]);
+        for (int i=0; i< stArry.length;i++)
+        {
+            Toast.makeText(this,"/n"+stArry[i]+":"+bMap.get(stArry[i]),Toast.LENGTH_LONG).show();
+        }
     }
 }

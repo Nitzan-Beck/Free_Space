@@ -123,7 +123,7 @@ public class CEO extends AppCompatActivity {
         BuildingList.setPositiveButton("serch", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                displayAllBuildings();
+//                displayAllBuildings();
             }
         });
         BuildingList.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
@@ -132,13 +132,14 @@ public class CEO extends AppCompatActivity {
                 Toast.makeText(CEO.this,"you didn't do anything",Toast.LENGTH_LONG).show();
             }
         });
+        BuildingList.create().show();
     }
-    public void displayAllBuildings()
-    {
-        final String[] stArry=bMap.keySet().toArray(new String[0]);
-        for (int i=0; i< stArry.length;i++)
-        {
-            Toast.makeText(this,"/n"+stArry[i]+":"+bMap.get(stArry[i]),Toast.LENGTH_LONG).show();
-        }
-    }
+//    public void displayAllBuildings()
+//    {
+//        final String[] stArry=bMap.keySet().toArray(new String[0]);
+//        for (int i=0; i< stArry.length;i++)
+//        {
+//            Toast.makeText(this,"/n"+stArry[i]+":"+bMap.get(stArry[i]),Toast.LENGTH_LONG).show();
+//        }
+//    }
 }

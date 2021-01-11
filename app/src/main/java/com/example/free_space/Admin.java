@@ -22,11 +22,12 @@ public class Admin extends AppCompatActivity {
         btnLookAs=findViewById(R.id.LookAs);
         btnLookAs.setOnClickListener(btnLookAsListener);
     }
+    //the action open Dialog and the user need to choose  witch view he wants to be in.
     private View.OnClickListener btnLookAsListener= new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            ArrayAdapter a=new ArrayAdapter(Admin.this,android.R.layout.simple_list_item_1,s);
-            AlertDialog.Builder adb= new AlertDialog.Builder(Admin.this);
+            ArrayAdapter a=new ArrayAdapter(Admin.this,android.R.layout.simple_list_item_1,s);// build ArrayAdapter and it calls a
+            AlertDialog.Builder adb= new AlertDialog.Builder(Admin.this); // build the AlertDialog and it calls adb
             adb.setTitle("Look as:");
             adb.setAdapter(a, new DialogInterface.OnClickListener() {
                 @Override

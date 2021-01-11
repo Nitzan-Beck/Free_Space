@@ -45,11 +45,12 @@ public class CEO extends AppCompatActivity {
         bMap.put("Building4",true);
 
     }
+    //the action open Dialog and the user need to choose  witch view he wants to be in.
     private View.OnClickListener btnLookAsListener=new View.OnClickListener() {
         @Override
         public void onClick(View v) {
-            ArrayAdapter a=new ArrayAdapter(CEO.this,android.R.layout.simple_list_item_1,s);
-            AlertDialog.Builder adb= new AlertDialog.Builder(CEO.this);
+            ArrayAdapter a=new ArrayAdapter(CEO.this,android.R.layout.simple_list_item_1,s);// build ArrayAdapter and it calls a
+            AlertDialog.Builder adb= new AlertDialog.Builder(CEO.this);// build the AlertDialog and it calls adb
             adb.setTitle("Look as:");
             adb.setAdapter(a, new DialogInterface.OnClickListener() {
                 @Override
@@ -78,10 +79,11 @@ public class CEO extends AppCompatActivity {
         wi = new WorkerItem("name2", 2, "Email2");
         arrayList.add(wi);
     }
+    //the action serch worker in the ListView
     public void Serch(View view) {
         boolean foundName=false;
         ArrayList<WorkerItem> temp=new ArrayList<WorkerItem>();
-        ArrayList<WorkerItem> temp1=new ArrayList<WorkerItem>(this.arrayList);
+        ArrayList<WorkerItem> temp1=new ArrayList<WorkerItem>(this.arrayList);// copy of the arrayList
         String name =String.valueOf(Name.getText());
         if (!String.valueOf(Name.getText()).equals("")){
             for (int i=0; i<temp1.size();i++)
@@ -99,11 +101,11 @@ public class CEO extends AppCompatActivity {
         else  {
             Toast.makeText(this,"you did not search anything",Toast.LENGTH_LONG).show();
         }
-        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp, true);
+        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp, true);// the 1st parameter is the context and it give the access to resources, the 2nd is layout and the 3rd is Data
         WorkerList.setAdapter(wa);
 
     }
-
+    // the action build AlertDialog and the user can choose which building will be in the ListView
     public void ChooseBuilding(View view) {
         final String[] stArry= bMap.keySet().toArray(new String[0]);//נבנה על בסיס המפתחות של הדיאלוג
         boolean [] boolArry=new boolean[bMap.size()];// נבנה על בסיס הערכים הבוליאנים של המפתחות

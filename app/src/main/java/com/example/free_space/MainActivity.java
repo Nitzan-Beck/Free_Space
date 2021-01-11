@@ -27,8 +27,6 @@ public class MainActivity extends AppCompatActivity {
         startActivity(i);
     }
 
-    public void btnSettings(View view) {
-        Intent i=new Intent(this, Settings.class);
-        startActivity(i);
-    }
+
+
 }

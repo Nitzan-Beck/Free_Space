@@ -74,9 +74,9 @@ public class CEO extends AppCompatActivity {
         startActivity(i);
     }
     public void getWrokerData() {
-        WorkerItem wi = new WorkerItem("name1", 1, "Email1");
+        WorkerItem wi = new WorkerItem("name1", 1, "Email1", 1);
         arrayList.add(wi);
-        wi = new WorkerItem("name2", 2, "Email2");
+        wi = new WorkerItem("name2", 2, "Email2",2);
         arrayList.add(wi);
     }
     //the action serch worker in the ListView

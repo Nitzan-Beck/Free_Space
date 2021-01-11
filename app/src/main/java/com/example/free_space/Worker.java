@@ -29,7 +29,7 @@ public class Worker extends AppCompatActivity {
         Room=findViewById(R.id.RoomNum);
         this.arrayList = new ArrayList<WorkerItem>();
         WorkerList=findViewById(R.id.WorkerList);
-        getWrokerData();
+        getWorkerData();
         WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, arrayList,false);
         WorkerList.setAdapter(wa);
     }
@@ -41,10 +41,10 @@ public class Worker extends AppCompatActivity {
         WorkerList=findViewById(R.id.WorkerList);
 
     }
-    public void getWrokerData() {
-        WorkerItem wi = new WorkerItem("name1", 1, "Email1");
+    public void getWorkerData() {
+        WorkerItem wi = new WorkerItem("name1", 1, "Email1",1 );
         arrayList.add(wi);
-        wi = new WorkerItem("name2", 2, "Email2");
+        wi = new WorkerItem("name2", 2, "Email2",2);
         arrayList.add(wi);
     }
 

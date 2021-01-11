@@ -4,11 +4,13 @@ public class WorkerItem {
     private String name;
     private int RoomNum;
     private String Email;
+    private int BuildingNum;
 
-    public WorkerItem(String name, int roomNum, String email) {
+    public WorkerItem(String name, int roomNum, String email, int buildingNum) {
         this.name = name;
-       this.RoomNum = roomNum;
-        this.Email = email;
+        RoomNum = roomNum;
+        Email = email;
+        BuildingNum = buildingNum;
     }
 
     public String getName() {
@@ -35,12 +37,21 @@ public class WorkerItem {
         Email = email;
     }
 
+    public int getBuildingNum() {
+        return BuildingNum;
+    }
+
+    public void setBuildingNum(int buildingNum) {
+        BuildingNum = buildingNum;
+    }
+
     @Override
     public String toString() {
-        return
+        return "WorkerItem{" +
                 "name='" + name + '\'' +
                 ", RoomNum=" + RoomNum +
                 ", Email='" + Email + '\'' +
+                ", BuildingNum=" + BuildingNum +
                 '}';
     }
 }

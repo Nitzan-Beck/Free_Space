@@ -49,8 +49,11 @@ public class WorkerAdapter extends ArrayAdapter<WorkerItem> {
         String s1="Worker's room number: "+wi.getRoomNum();
         tv2.setText(s1);
         TextView tv3=v.findViewById(R.id.EmailItem);
-        String s2="Worker's Email:  "+wi.getRoomNum();
+        String s2="Worker's Email:  "+wi.getEmail();
         tv3.setText(s2);
+        TextView tv4=v.findViewById(R.id.BuildingItem);
+        String s4="Worker's Building:  "+wi.getBuildingNum();
+        tv4.setText(s4);
         return  v;
     }
 }

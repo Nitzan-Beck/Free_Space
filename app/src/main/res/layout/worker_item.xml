@@ -43,4 +43,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/NumberRoomItem"
         app:layout_constraintTop_toBottomOf="@+id/NumberRoomItem" />
+
+    <TextView
+        android:id="@+id/BuildingItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="worker's building: "
+        android:textColor="#000000"
+        android:textSize="14sp"
+        app:layout_constraintEnd_toEndOf="@+id/EmailItem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/EmailItem"
+        app:layout_constraintTop_toBottomOf="@+id/EmailItem" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -35,8 +35,7 @@ public class WorkerAdapter extends ArrayAdapter<WorkerItem> {
     }
     @Override
     public int getCount(){ return data.size();}
-
-
+    
     @Override
     public View getView(int position,  View convertView,  ViewGroup parent) {
         LayoutInflater li=(LayoutInflater)this.ctx.getSystemService(Context.LAYOUT_INFLATER_SERVICE);

@@ -101,6 +101,7 @@ public class CEO extends AppCompatActivity {
         else  {
             Toast.makeText(this,"you did not search anything",Toast.LENGTH_LONG).show();
         }
+
         WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp, true);// the 1st parameter is the context and it give the access to resources, the 2nd is layout and the 3rd is Data
         WorkerList.setAdapter(wa);
 
@@ -120,11 +121,17 @@ public class CEO extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which, boolean isChecked) {
                 bMap.put(stArry[which], isChecked);
+
             }
         });
         BuildingList.setPositiveButton("serch", new DialogInterface.OnClickListener() {
             @Override
-            public void onClick(DialogInterface dialog, int which) {
+            public void onClick(DialogInterface dialog, int which) {//just for building 2 TBC
+                ArrayList<WorkerItem> temp2=new ArrayList<WorkerItem>();
+                WorkerItem wi = new WorkerItem("name2", 2, "Email2",2);
+                temp2.add(wi);
+                WorkerAdapter wa=new WorkerAdapter(CEO.this,R.layout.worker_item, temp2, true);// the 1st parameter is the context and it give the access to resources, the 2nd is layout and the 3rd is Data
+                WorkerList.setAdapter(wa);
 //                displayAllBuildings();
             }
         });

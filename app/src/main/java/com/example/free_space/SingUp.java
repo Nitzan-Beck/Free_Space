@@ -13,6 +13,7 @@ public class SingUp extends AppCompatActivity {
     private EditText pass;
     private  EditText email;
     private EditText BN;//Building number
+    private EditText Type;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -21,10 +22,11 @@ public class SingUp extends AppCompatActivity {
         pass=findViewById(R.id.NewUserPassword);
         email=findViewById(R.id.NewUserEmail);
         BN=findViewById(R.id.NewUserBuildingNum);
+        Type=findViewById(R.id.NewUserType);
     }
 
     public void btnSend(View view) {
-        Toast.makeText(this,"Name: "+ name.getText()+", Password: "+ pass.getText()+", email: "+ email.getText()+", Building number: "+BN.getText(),Toast.LENGTH_LONG).show();
+        Toast.makeText(this,"Name: "+ name.getText()+", Password: "+ pass.getText()+", email: "+ email.getText()+", Building number: "+BN.getText()+", type: "+Type.getText(),Toast.LENGTH_LONG).show();
     }
 
     public void GoBack(View view) {

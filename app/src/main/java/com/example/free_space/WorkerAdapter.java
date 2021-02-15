@@ -42,17 +42,20 @@ public class WorkerAdapter extends ArrayAdapter<WorkerItem> {
         View v =li.inflate(this.WorkerResourcedID, null);
         WorkerItem wi=this.data.get(position);
         TextView tv1=v.findViewById(R.id.WorkerNameItem);
-        String s="Worker name: "+wi.getName();
-        tv1.setText(s);
+        String s1="Worker name: "+wi.getName();
+        tv1.setText(s1);
         TextView tv2=v.findViewById(R.id.NumberRoomItem);
-        String s1="Worker's room number: "+wi.getRoomNum();
-        tv2.setText(s1);
+        String s2="Worker's room number: "+wi.getRoomNum();
+        tv2.setText(s2);
         TextView tv3=v.findViewById(R.id.EmailItem);
-        String s2="Worker's Email:  "+wi.getEmail();
-        tv3.setText(s2);
+        String s3="Worker's Email:  "+wi.getEmail();
+        tv3.setText(s3);
         TextView tv4=v.findViewById(R.id.BuildingItem);
         String s4="Worker's Building:  "+wi.getBuildingNum();
         tv4.setText(s4);
+        TextView tv5=v.findViewById(R.id.typeItem);
+        String s5="Worker's type:  "+wi.gettype();
+        tv5.setText(s5);
         return  v;
     }
 }

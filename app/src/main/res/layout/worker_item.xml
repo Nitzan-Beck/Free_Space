@@ -9,12 +9,13 @@
         android:id="@+id/WorkerNameItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="8dp"
         android:text="Worker Name: "
         android:textColor="#000000"
         android:textSize="14sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.022"
+        app:layout_constraintHorizontal_bias="0.025"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -22,7 +23,7 @@
         android:id="@+id/NumberRoomItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="12dp"
+        android:layout_marginTop="4dp"
         android:text="Worker's room number:"
         android:textColor="#000000"
         android:textSize="14sp"
@@ -35,7 +36,7 @@
         android:id="@+id/EmailItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="Worker's Email: "
         android:textColor="#000000"
         android:textSize="14sp"
@@ -48,7 +49,7 @@
         android:id="@+id/BuildingItem"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:text="worker's building: "
         android:textColor="#000000"
         android:textSize="14sp"
@@ -56,4 +57,16 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/EmailItem"
         app:layout_constraintTop_toBottomOf="@+id/EmailItem" />
+
+    <TextView
+        android:id="@+id/typeItem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Worker's type:"
+        android:textColor="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/BuildingItem"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/BuildingItem"
+        app:layout_constraintTop_toBottomOf="@+id/BuildingItem" />
 </androidx.constraintlayout.widget.ConstraintLayout>

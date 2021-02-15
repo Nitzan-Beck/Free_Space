@@ -5,12 +5,14 @@ public class WorkerItem {
     private int RoomNum;
     private String Email;
     private int BuildingNum;
+    private String type;
 
-    public WorkerItem(String name, int roomNum, String email, int buildingNum) {
+    public WorkerItem(String name, int roomNum, String email, int buildingNum, String type) {
         this.name = name;
         RoomNum = roomNum;
         Email = email;
         BuildingNum = buildingNum;
+        this.type = type;
     }
 
     public String getName() {
@@ -45,6 +47,12 @@ public class WorkerItem {
         BuildingNum = buildingNum;
     }
 
+    public String gettype() { return type; }
+
+    public void settype(String type) {
+        this.type = type;
+    }
+
     @Override
     public String toString() {
         return "WorkerItem{" +
@@ -52,6 +60,7 @@ public class WorkerItem {
                 ", RoomNum=" + RoomNum +
                 ", Email='" + Email + '\'' +
                 ", BuildingNum=" + BuildingNum +
+                ", type='" + type + '\'' +
                 '}';
     }
 }

@@ -23,4 +23,9 @@ public class Boss extends AppCompatActivity {
         Intent i=new Intent(this,Worker.class);
         startActivity(i);
     }
+
+    public void NewWorker(View view) {
+        Intent i=new Intent(this,SingIn.class);
+        startActivity(i);
+    }
 }

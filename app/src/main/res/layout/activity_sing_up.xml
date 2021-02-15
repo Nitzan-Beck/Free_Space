@@ -25,6 +25,7 @@
         android:id="@+id/buttonSend"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
         android:onClick="btnSend"
         android:text="Send"
         android:textAllCaps="false"
@@ -32,8 +33,8 @@
         android:textSize="30sp"
         app:layout_constraintEnd_toStartOf="@+id/Back"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/NewUserBuildingNum"
-        app:layout_constraintTop_toTopOf="@+id/Back" />
+        app:layout_constraintStart_toStartOf="@+id/NewUserType"
+        app:layout_constraintTop_toBottomOf="@+id/NewUserType" />
 
     <EditText
         android:id="@+id/NewUserName"
@@ -54,7 +55,7 @@
         android:id="@+id/NewUserEmail"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Enter your email"
         android:inputType="textEmailAddress"
@@ -68,20 +69,21 @@
         android:id="@+id/Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="68dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="44dp"
         android:onClick="GoBack"
         android:text="Back"
         android:textAllCaps="false"
         android:textColor="#022170"
         android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/NewUserBuildingNum"
-        app:layout_constraintTop_toBottomOf="@+id/NewUserBuildingNum" />
+        app:layout_constraintEnd_toEndOf="@+id/NewUserType"
+        app:layout_constraintTop_toBottomOf="@+id/NewUserType" />
 
     <EditText
         android:id="@+id/NewUserBuildingNum"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Enter Building number"
         android:inputType="number"
@@ -96,7 +98,7 @@
         android:id="@+id/NewUserPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="36dp"
+        android:layout_marginTop="24dp"
         android:ems="10"
         android:hint="Enter your password"
         android:inputType="textPassword"
@@ -106,4 +108,19 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/NewUserName"
         app:layout_constraintTop_toBottomOf="@+id/NewUserName" />
+
+    <EditText
+        android:id="@+id/NewUserType"
+        android:layout_width="278dp"
+        android:layout_height="49dp"
+        android:layout_marginTop="24dp"
+        android:ems="10"
+        android:hint="Enter user type: Worker/Boss"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/NewUserBuildingNum"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/NewUserBuildingNum"
+        app:layout_constraintTop_toBottomOf="@+id/NewUserBuildingNum" />
 </androidx.constraintlayout.widget.ConstraintLayout>

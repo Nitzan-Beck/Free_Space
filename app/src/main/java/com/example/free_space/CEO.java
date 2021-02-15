@@ -74,9 +74,13 @@ public class CEO extends AppCompatActivity {
         startActivity(i);
     }
     public void getWrokerData() {
-        WorkerItem wi = new WorkerItem("name1", 1, "Email1", 1);
+        WorkerItem wi = new WorkerItem("name1", 1, "Email1", 1,"Boss");
         arrayList.add(wi);
-        wi = new WorkerItem("name2", 2, "Email2",2);
+        wi = new WorkerItem("name2", 2, "Email2",2,"Worker");
+        arrayList.add(wi);
+        wi = new WorkerItem("name3", 3, "Email3",3,"Worker");
+        arrayList.add(wi);
+        wi = new WorkerItem("name4", 2, "Email4",4,"Boss");
         arrayList.add(wi);
     }
     //the action serch worker in the ListView
@@ -128,7 +132,7 @@ public class CEO extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which) {//just for building 2 TBC
                 ArrayList<WorkerItem> temp2=new ArrayList<WorkerItem>();
-                WorkerItem wi = new WorkerItem("name2", 2, "Email2",2);
+                WorkerItem wi = new WorkerItem("name2", 2, "Email2",2,"worker");
                 temp2.add(wi);
                 WorkerAdapter wa=new WorkerAdapter(CEO.this,R.layout.worker_item, temp2, true);// the 1st parameter is the context and it give the access to resources, the 2nd is layout and the 3rd is Data
                 WorkerList.setAdapter(wa);

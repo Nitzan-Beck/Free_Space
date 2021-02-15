@@ -42,9 +42,13 @@ public class Worker extends AppCompatActivity {
 
     }
     public void getWorkerData() {
-        WorkerItem wi = new WorkerItem("name1", 1, "Email1",1 );
+        WorkerItem wi = new WorkerItem("name1", 1, "Email1",1,"Boss");
         arrayList.add(wi);
-        wi = new WorkerItem("name2", 2, "Email2",2);
+        wi = new WorkerItem("name2", 2, "Email2",2,"Worker");
+        arrayList.add(wi);
+        wi = new WorkerItem("name3", 3, "Email3",3,"Worker");
+        arrayList.add(wi);
+        wi = new WorkerItem("name4", 2, "Email4",4,"Boss");
         arrayList.add(wi);
     }
 

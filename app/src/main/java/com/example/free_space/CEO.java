@@ -113,7 +113,7 @@ public class CEO extends AppCompatActivity {
     // the action build AlertDialog and the user can choose which building will be in the ListView
     public void ChooseBuilding(View view) {
         final String[] stArry= bMap.keySet().toArray(new String[0]);//נבנה על בסיס המפתחות של הדיאלוג
-        boolean [] boolArry=new boolean[bMap.size()];// נבנה על בסיס הערכים הבוליאנים של המפתחות
+          boolean [] boolArry=new boolean[bMap.size()];// נבנה על בסיס הערכים הבוליאנים של המפתחות
 
         for (int i=0; i>stArry.length;i++)
         {

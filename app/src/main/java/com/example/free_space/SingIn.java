@@ -8,8 +8,6 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.google.firebase.database.DatabaseReference;
-import com.google.firebase.database.FirebaseDatabase;
 
 public class SingIn extends AppCompatActivity {
     private EditText name;
@@ -28,11 +26,7 @@ public class SingIn extends AppCompatActivity {
     }
 
     public void Send(View view) {
-        //Toast.makeText(this,"Name: "+ name.getText()+", Password: "+ pass.getText(),Toast.LENGTH_LONG).show();
-        // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
+        Toast.makeText(this,"Name: "+ name.getText()+", Password: "+ pass.getText(),Toast.LENGTH_LONG).show();
 
-        myRef.setValue("Hello, World!");
     }
 }

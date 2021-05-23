@@ -1,13 +1,14 @@
 {
   "project_info": {
     "project_number": "880478953487",
+    "firebase_url": "https://freespace-3f57a-default-rtdb.firebaseio.com",
     "project_id": "freespace-3f57a",
     "storage_bucket": "freespace-3f57a.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:880478953487:android:0496f71344f54f3f18037a",
+        "mobilesdk_app_id": "1:880478953487:android:4950aeb7ad932e0718037a",
         "android_client_info": {
           "package_name": "com.example.free_space"
         }

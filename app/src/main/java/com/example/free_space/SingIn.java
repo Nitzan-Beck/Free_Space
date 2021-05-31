@@ -15,6 +15,8 @@ import com.google.firebase.database.FirebaseDatabase;
 public class SingIn extends AppCompatActivity {
     private EditText name;
     private EditText pass;
+    FirebaseDatabase database;
+    DatabaseReference myRef;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,9 +33,15 @@ public class SingIn extends AppCompatActivity {
     public void Send(View view) {
         Toast.makeText(this,"Name: "+ name.getText()+", Password: "+ pass.getText(),Toast.LENGTH_LONG).show();
         // Write a message to the database
-        FirebaseDatabase database = FirebaseDatabase.getInstance();
-        DatabaseReference myRef = database.getReference("message");
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
+        //  for (int i =1; i<=5;i++)
+        //  {
+        //      myRef.child("workers").child(""+i).setValue("Name: "+ name.getText()+", Password: "+ pass.getText());
 
-        myRef.setValue("Hello, World!");
+        // }
+        //for delete data we use: myRef.setValue("");
     }
+
+
 }

@@ -73,6 +73,11 @@ public class SingUp extends AppCompatActivity {
             Intent i = new Intent(this, Boss.class);
             startActivity(i);
         }
+        else if (WI.gettype().equals("CEO"))
+        {
+            Intent i = new Intent(SingUp.this, CEO.class);
+            startActivity(i);
+        }
     }
 
     public void GoBack(View view) {

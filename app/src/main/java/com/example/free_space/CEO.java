@@ -1,10 +1,12 @@
 package com.example.free_space;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -12,6 +14,13 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.Query;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,6 +30,8 @@ public class CEO extends AppCompatActivity {
     private ArrayList<WorkerItem> arrayList;
     private EditText Name;
     HashMap<String, Boolean> bMap=new HashMap<String, Boolean>();
+    FirebaseDatabase database;
+    DatabaseReference myRef;
 
     private Button btnLookAs;
     String[] s={"look as worker", "Look as boss"};
@@ -28,6 +39,10 @@ public class CEO extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_c_e_o);
+
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
+
         Name=findViewById(R.id.CEOSerchWorker);
         this.arrayList = new ArrayList<WorkerItem>();
         WorkerList=findViewById(R.id.ListViewFromCEO);
@@ -74,15 +89,24 @@ public class CEO extends AppCompatActivity {
         startActivity(i);
     }
     public void getWrokerData() {
-        WorkerItem wi = new WorkerItem("name1", 1, "Email1", 1,"Boss", "aa");
-        arrayList.add(wi);
-        wi = new WorkerItem("name2", 2, "Email2",2,"Worker", "aa");
-        arrayList.add(wi);
-        wi = new WorkerItem("name3", 3, "Email3",3,"Worker", "aa");
-        arrayList.add(wi);
-        wi = new WorkerItem("name4", 2, "Email4",4,"Boss", "aa");
-        arrayList.add(wi);
+        Query q = this.myRef.child("Workers").orderByValue();
+
+        q.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                for (DataSnapshot dst : dataSnapshot.getChildren()) {
+                    WorkerItem temp = dst.getValue(WorkerItem.class);
+
+                    arrayList.add(temp);
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
     }
+
     //the action serch worker in the ListView
     public void Serch(View view) {
         boolean foundName=false;

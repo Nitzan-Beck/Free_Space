@@ -75,6 +75,11 @@ public class SingIn extends AppCompatActivity {
                             Intent i = new Intent(SingIn.this, Boss.class);
                             startActivity(i);
                         }
+                        else if (temp.gettype().equals("CEO"))
+                        {
+                            Intent i = new Intent(SingIn.this, CEO.class);
+                            startActivity(i);
+                        }
                     }
                 }
 

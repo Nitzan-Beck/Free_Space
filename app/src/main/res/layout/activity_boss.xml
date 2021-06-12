@@ -50,40 +50,16 @@
         app:layout_constraintTop_toBottomOf="@+id/txtBoss" />
 
     <Button
-        android:id="@+id/FindEmptyChair"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Find Empty Chair"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/NewWorker"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/NewWorker"
-        app:layout_constraintTop_toBottomOf="@+id/NewWorker" />
-
-    <Button
-        android:id="@+id/ChangeWorkerPlace"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Change Worker Place"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/FindEmptyChair"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/FindEmptyChair"
-        app:layout_constraintTop_toBottomOf="@+id/FindEmptyChair" />
-
-    <Button
         android:id="@+id/DeletWorker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
-        android:text="Delet Worker"
+        android:layout_marginTop="32dp"
+        android:text="Delete Worker"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/ChangeWorkerPlace"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/ChangeWorkerPlace"
-        app:layout_constraintTop_toBottomOf="@+id/ChangeWorkerPlace" />
+        app:layout_constraintEnd_toEndOf="@+id/NewWorker"
+        app:layout_constraintHorizontal_bias="0.533"
+        app:layout_constraintStart_toStartOf="@+id/NewWorker"
+        app:layout_constraintTop_toBottomOf="@+id/NewWorker" />
 
     <Button
         android:id="@+id/LookAsWorker"

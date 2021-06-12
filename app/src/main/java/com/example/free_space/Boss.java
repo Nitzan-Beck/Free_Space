@@ -35,4 +35,8 @@ public class Boss extends AppCompatActivity {
         Intent i=new Intent(this,SingIn.class);
         startActivity(i);
     }
+
+    public void deleteWorker(View view) {
+
+    }
 }

@@ -128,15 +128,15 @@ public class CEO extends AppCompatActivity {
                     foundName=true;
                 }
             }
-                if(!foundName) {
-                    Toast.makeText(this,"you search a name that not exists",Toast.LENGTH_LONG).show();
-                }
+            if(!foundName) {
+                Toast.makeText(this,"you search a name that not exists",Toast.LENGTH_LONG).show();
+            }
         }
         else  {
             Toast.makeText(this,"you did not search anything",Toast.LENGTH_LONG).show();
         }
 
-        WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, temp, true);// the 1st parameter is the context and it give the access to resources, the 2nd is layout and the 3rd is Data
+        WorkerAdapter wa = new WorkerAdapter(this,R.layout.worker_item, temp, true);// the 1st parameter is the context and it give the access to resources, the 2nd is layout and the 3rd is Data
         WorkerList.setAdapter(wa);
 
     }

@@ -54,14 +54,14 @@ public class CEO extends AppCompatActivity {
         btnLookAs.setOnClickListener(btnLookAsListener);
 
 
-        bMap.put("Building1",true);
-        bMap.put("Building2",true);
-        bMap.put("Building3",true);
-        bMap.put("Building4",true);
+        bMap.put("1", false);
+        bMap.put("2", false);
+        bMap.put("3", false);
+        bMap.put("4", false);
 
     }
     //the action open Dialog and the user need to choose  witch view he wants to be in.
-    private View.OnClickListener btnLookAsListener=new View.OnClickListener() {
+    private View.OnClickListener btnLookAsListener = new View.OnClickListener() {
         @Override
         public void onClick(View v) {
             ArrayAdapter a=new ArrayAdapter(CEO.this,android.R.layout.simple_list_item_1,s);// build ArrayAdapter and it calls a
@@ -142,8 +142,8 @@ public class CEO extends AppCompatActivity {
     }
     // the action build AlertDialog and the user can choose which building will be in the ListView
     public void ChooseBuilding(View view) {
-        final String[] stArry= bMap.keySet().toArray(new String[0]);//נבנה על בסיס המפתחות של הדיאלוג
-          boolean [] boolArry=new boolean[bMap.size()];// נבנה על בסיס הערכים הבוליאנים של המפתחות
+        final String[] stArry= bMap.keySet().toArray(new String[0]);
+          boolean [] boolArry=new boolean[bMap.size()];
 
         for (int i=0; i>stArry.length;i++)
         {
@@ -155,20 +155,46 @@ public class CEO extends AppCompatActivity {
             @Override
             public void onClick(DialogInterface dialog, int which, boolean isChecked) {
                 bMap.put(stArry[which], isChecked);
-
             }
         });
-        BuildingList.setPositiveButton("serch", new DialogInterface.OnClickListener() {
+        BuildingList.setPositiveButton("search", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {//just for building 2 TBC
-                ArrayList<WorkerItem> temp2=new ArrayList<WorkerItem>();
-                WorkerItem wi = new WorkerItem("name2", 2, "Email2",2,"worker", "aa");
-                temp2.add(wi);
-                WorkerAdapter wa=new WorkerAdapter(CEO.this,R.layout.worker_item, temp2, true);// the 1st parameter is the context and it give the access to resources, the 2nd is layout and the 3rd is Data
-                WorkerList.setAdapter(wa);
-//                displayAllBuildings();
+                arrayList.clear();
+                Query q = myRef.child("Workers").orderByValue();
+
+                q.addListenerForSingleValueEvent(new ValueEventListener() {
+                    @Override
+                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                        for (DataSnapshot dst : dataSnapshot.getChildren()) {
+                            WorkerItem worker = dst.getValue(WorkerItem.class);
+
+                            for (int i = 0; i < stArry.length; i++) {
+                                if ((boolean) bMap.get(stArry[i])) {
+                                    assert worker != null;
+                                    if ((i+1) == worker.getBuildingNum()) {
+                                        arrayList.add(worker);
+                                    }
+                                }
+                            }
+                        }
+
+                        bMap.put("1", false);
+                        bMap.put("2", false);
+                        bMap.put("3", false);
+                        bMap.put("4", false);
+
+                        WorkerAdapter wa = new WorkerAdapter(CEO.this,R.layout.worker_item, arrayList, true);// the 1st parameter is the context and it give the access to resources, the 2nd is layout and the 3rd is Data
+                        WorkerList.setAdapter(wa);
+                    }
+
+                    @Override
+                    public void onCancelled(DatabaseError databaseError) {
+                    }
+                });
             }
         });
+
         BuildingList.setNegativeButton("cancel", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {

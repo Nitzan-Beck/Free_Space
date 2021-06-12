@@ -7,12 +7,18 @@ public class WorkerItem {
     private int BuildingNum;
     private String type;
 
-    public WorkerItem(String name, int roomNum, String email, int buildingNum, String type) {
+
+    private String password;
+
+    public WorkerItem() {}
+
+    public WorkerItem(String name, int roomNum, String email, int buildingNum, String type, String pass) {
         this.name = name;
         RoomNum = roomNum;
         Email = email;
         BuildingNum = buildingNum;
         this.type = type;
+        this.password = pass;
     }
 
     public String getName() {
@@ -52,6 +58,10 @@ public class WorkerItem {
     public void settype(String type) {
         this.type = type;
     }
+
+    public String getPassword() { return password; }
+
+    public void setPassword(String password) { this.password = password; }
 
     @Override
     public String toString() {

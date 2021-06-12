@@ -9,14 +9,15 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".SingUp"/>
-        <activity android:name=".CEO" />
-        <activity android:name=".SingIn" >          <intent-filter>
+        <activity android:name=".SingUp">
+        <intent-filter>
             <action android:name="android.intent.action.MAIN" />
 
             <category android:name="android.intent.category.LAUNCHER" />
         </intent-filter>
         </activity>
+        <activity android:name=".CEO"/>
+        <activity android:name=".SingIn" />
         <activity android:name=".Admin" />
         <activity android:name=".Boss" />
 

@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.DownloadManager;
 import android.content.Context;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.ArrayAdapter;
@@ -43,14 +44,24 @@ public class Worker extends AppCompatActivity {
         getWorkerData();
         WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, arrayList,false);
         WorkerList.setAdapter(wa);
+
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+
+        String userId = pref.getString("user_id", null); // getting String
+
+        Toast.makeText(Worker.this, userId, Toast.LENGTH_LONG).show();
     }
 
     public void btnWorkerLogout(View view) {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        SharedPreferences.Editor editor = pref.edit();
+
+        editor.clear(); // remove user id
+        editor.commit(); // commit changes
+
         Intent i=new Intent(this,MainActivity.class);
         startActivity(i);
-
-        WorkerList=findViewById(R.id.WorkerList);
-
     }
     public void getWorkerData() {
 //        WorkerItem wi = new WorkerItem("name1", 1, "Email1",1,"Boss");

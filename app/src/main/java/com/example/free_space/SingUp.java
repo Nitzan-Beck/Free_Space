@@ -3,6 +3,7 @@ package com.example.free_space;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.EditText;
@@ -30,25 +31,48 @@ public class SingUp extends AppCompatActivity {
         BN=findViewById(R.id.NewUserBuildingNum);
         Type=findViewById(R.id.NewUserType);
         RN=findViewById(R.id.NewUserRoomNumber);
+
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
     }
 
     public void btnSend(View view) {
         Toast.makeText(this,"Name: "+ name.getText()+", Password: "+ pass.getText()+", email: "+ email.getText()+", Building number: "+BN.getText()+", type: "+Type.getText(),Toast.LENGTH_LONG).show();
         // Write a message to the database
-        database = FirebaseDatabase.getInstance();
-        myRef = database.getReference();
 
         AddWorker();
     }
     private void AddWorker()
     {
-        WorkerItem WI= new WorkerItem(""+name.getText(), 2,"sdsd",3,"Boss");
-        myRef.child("Workers").child(WI.getName()).setValue(WI);
-//        myRef.child("workers").child(""+name.getText()).child("Name: ").setValue(" "+name.getText());
-//        myRef.child("workers").child(""+name.getText()).child("Password: ").setValue(" "+pass.getText());
-//        myRef.child("workers").child(""+name.getText()).child("email: ").setValue(" "+email.getText());
-//        myRef.child("workers").child(""+name.getText()).child("Building number: ").setValue(" "+BN.getText());
-//        myRef.child("workers").child(""+name.getText()).child("type: ").setValue(" "+Type.getText());
+        WorkerItem WI= new WorkerItem(String.valueOf(name.getText()),
+                Integer.parseInt(String.valueOf(RN.getText())),
+                String.valueOf(this.email.getText()),
+                Integer.parseInt(String.valueOf(BN.getText())),
+                String.valueOf(Type.getText()),
+                String.valueOf(pass.getText()));
+
+        String userID = this.myRef.child("Workers").push().getKey();
+        assert userID != null;
+        myRef.child("Workers").child(userID).setValue(WI);
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        SharedPreferences.Editor editor = pref.edit();
+
+        editor.putString("user_id", userID);
+
+        editor.commit(); // commit changes
+
+        //move to Worker\Boss menu
+        if (WI.gettype().equals("Worker"))
+        {
+            Intent i = new Intent(this, Worker.class);
+            startActivity(i);
+        }
+        else if (WI.gettype().equals("Boss"))
+        {
+            Intent i = new Intent(this, Boss.class);
+            startActivity(i);
+        }
     }
 
     public void GoBack(View view) {

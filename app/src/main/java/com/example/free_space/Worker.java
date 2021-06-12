@@ -33,24 +33,28 @@ public class Worker extends AppCompatActivity {
     private EditText Room;
     FirebaseDatabase database;
     DatabaseReference myRef;
+    private String userId;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_worker);
+
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
+
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        this.userId = pref.getString("user_id", null); // getting String
+        Toast.makeText(Worker.this, userId, Toast.LENGTH_LONG).show();
+
         Name=findViewById(R.id.SerchWorkerName);
         Room=findViewById(R.id.RoomNum);
-        this.arrayList = new ArrayList<WorkerItem>();
         WorkerList=findViewById(R.id.WorkerList);
+        this.arrayList = new ArrayList<WorkerItem>();
+
         getWorkerData();
         WorkerAdapter wa=new WorkerAdapter(this,R.layout.worker_item, arrayList,false);
         WorkerList.setAdapter(wa);
-
-
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
-
-        String userId = pref.getString("user_id", null); // getting String
-
-        Toast.makeText(Worker.this, userId, Toast.LENGTH_LONG).show();
     }
 
     public void btnWorkerLogout(View view) {
@@ -64,14 +68,35 @@ public class Worker extends AppCompatActivity {
         startActivity(i);
     }
     public void getWorkerData() {
-//        WorkerItem wi = new WorkerItem("name1", 1, "Email1",1,"Boss");
-//        arrayList.add(wi);
-//        wi = new WorkerItem("name2", 2, "Email2",2,"Worker");
-//        arrayList.add(wi);
-//        wi = new WorkerItem("name3", 3, "Email3",3,"Worker");
-//        arrayList.add(wi);
-//        wi = new WorkerItem("name4", 2, "Email4",4,"Boss");
-//        arrayList.add(wi);
+        Query q = this.myRef.child("Workers").orderByValue();
+
+        q.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                int buildingNumber = 0;
+                for(DataSnapshot dst: dataSnapshot.getChildren())
+                {
+                    if(String.valueOf(dst.getKey()).equals(userId)) {
+                        WorkerItem temp = dst.getValue(WorkerItem.class);
+                        assert temp != null;
+                        buildingNumber = temp.getBuildingNum();
+                    }
+                }
+
+                for(DataSnapshot dst: dataSnapshot.getChildren())
+                {
+                    WorkerItem temp = dst.getValue(WorkerItem.class);
+                    assert temp != null;
+                    if (temp.getBuildingNum() == buildingNumber){
+                        arrayList.add(temp);
+                    }
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+            }
+        });
     }
 
     public void SearchBtn(View view) {

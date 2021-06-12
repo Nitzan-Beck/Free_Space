@@ -85,6 +85,12 @@ public class CEO extends AppCompatActivity {
     };
 
     public void btnCEOLogout(View view) {
+        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+        SharedPreferences.Editor editor = pref.edit();
+
+        editor.clear(); // remove user id
+        editor.commit(); // commit changes
+
         Intent i=new Intent(this,MainActivity.class);
         startActivity(i);
     }

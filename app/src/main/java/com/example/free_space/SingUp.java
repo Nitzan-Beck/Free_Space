@@ -81,7 +81,7 @@ public class SingUp extends AppCompatActivity {
     }
 
     public void GoBack(View view) {
-        Intent i=new Intent(this,MainActivity.class);
+        Intent i=new Intent(this,Boss.class);
         startActivity(i);
     }
 }

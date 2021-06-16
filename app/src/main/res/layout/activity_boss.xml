@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Boss"
-    android:background="#36EA94DE">
+    android:background="#41123CB8"
+    tools:context=".Boss">
 
 
     <Button
@@ -22,19 +22,6 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/LookAsWorker"
         app:layout_constraintTop_toBottomOf="@+id/LookAsWorker" />
-
-    <TextView
-        android:id="@+id/txtBoss"
-        android:layout_width="317dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="36dp"
-        android:gravity="center"
-        android:text="Boss"
-        android:textColor="#F80000"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/NewWorker"
@@ -73,4 +60,17 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/DeletWorker"
         app:layout_constraintTop_toBottomOf="@+id/DeletWorker" />
+
+    <TextView
+        android:id="@+id/txtBoss"
+        android:layout_width="317dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="36dp"
+        android:gravity="center"
+        android:text="Boss"
+        android:textColor="#F80000"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,22 +4,9 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".SingUp"
-    android:background="#36EA94DE">
+    android:background="#36EA94DE"
+    tools:context=".SingUp">
 
-
-    <TextView
-        android:id="@+id/txtSignUp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="48dp"
-        android:gravity="center"
-        android:text="Sign Up"
-        android:textColor="#FF0000"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonSend"
@@ -35,20 +22,19 @@
         app:layout_constraintStart_toStartOf="@+id/NewUserRoomNumber"
         app:layout_constraintTop_toTopOf="@+id/Back" />
 
-    <EditText
-        android:id="@+id/NewUserName"
+    <Button
+        android:id="@+id/Back"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:hint="Enter your username"
-        android:inputType="textPersonName"
-        android:textColor="#000000"
-        android:textColorHint="#000000"
-        app:layout_constraintEnd_toEndOf="@+id/txtSignUp"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/txtSignUp"
-        app:layout_constraintTop_toBottomOf="@+id/txtSignUp" />
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="36dp"
+        android:onClick="GoBack"
+        android:text="Back"
+        android:textAllCaps="false"
+        android:textColor="#022170"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="@+id/NewUserRoomNumber"
+        app:layout_constraintTop_toBottomOf="@+id/NewUserRoomNumber" />
 
     <EditText
         android:id="@+id/NewUserEmail"
@@ -65,19 +51,20 @@
         app:layout_constraintStart_toStartOf="@+id/NewUserPassword"
         app:layout_constraintTop_toBottomOf="@+id/NewUserPassword" />
 
-    <Button
-        android:id="@+id/Back"
+    <EditText
+        android:id="@+id/NewUserName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginEnd="36dp"
-        android:onClick="GoBack"
-        android:text="Back"
-        android:textAllCaps="false"
-        android:textColor="#022170"
-        android:textSize="30sp"
-        app:layout_constraintEnd_toEndOf="@+id/NewUserRoomNumber"
-        app:layout_constraintTop_toBottomOf="@+id/NewUserRoomNumber" />
+        android:layout_marginTop="40dp"
+        android:ems="10"
+        android:hint="Enter your username"
+        android:inputType="textPersonName"
+        android:textColor="#000000"
+        android:textColorHint="#000000"
+        app:layout_constraintEnd_toEndOf="@+id/txtSignUp"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@+id/txtSignUp"
+        app:layout_constraintTop_toBottomOf="@+id/txtSignUp" />
 
     <EditText
         android:id="@+id/NewUserBuildingNum"
@@ -139,4 +126,17 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/NewUserType"
         app:layout_constraintTop_toBottomOf="@+id/NewUserType" />
+
+    <TextView
+        android:id="@+id/txtSignUp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="48dp"
+        android:gravity="center"
+        android:text="Sign Up"
+        android:textColor="#FF0000"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -4,8 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Admin"
-    android:background="#36EA94DE">
+    android:background="#41123CB8"
+    tools:context=".Admin">
 
 
     <Button
@@ -22,20 +22,6 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="@+id/LookAs"
         app:layout_constraintTop_toBottomOf="@+id/LookAs" />
-
-    <TextView
-        android:id="@+id/txtAdmin"
-        android:layout_width="317dp"
-        android:layout_height="68dp"
-        android:gravity="center"
-        android:text="Admin"
-        android:textColor="#F80000"
-        android:textSize="50sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.095" />
 
     <Button
         android:id="@+id/DataBase"
@@ -60,4 +46,18 @@
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/DataBase"
         app:layout_constraintTop_toBottomOf="@+id/DataBase" />
+
+    <TextView
+        android:id="@+id/txtAdmin"
+        android:layout_width="317dp"
+        android:layout_height="68dp"
+        android:gravity="center"
+        android:text="Admin"
+        android:textColor="#F80000"
+        android:textSize="50sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.095" />
 </androidx.constraintlayout.widget.ConstraintLayout>

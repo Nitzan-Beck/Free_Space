@@ -4,22 +4,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CEO"
-    android:background="#36EA94DE">
-
-    <TextView
-        android:id="@+id/txtCEO"
-        android:layout_width="317dp"
-        android:layout_height="68dp"
-        android:layout_marginTop="4dp"
-        android:gravity="center"
-        android:text="CEO"
-        android:textColor="#F80000"
-        android:textSize="50sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.404"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+    android:background="#41123CB8"
+    tools:context=".CEO">
 
     <Button
         android:id="@+id/buttonCEOLogout"
@@ -61,15 +47,17 @@
         app:layout_constraintStart_toStartOf="@+id/ChooseBuilding"
         app:layout_constraintTop_toBottomOf="@+id/ChooseBuilding" />
 
-    <ListView
-        android:id="@+id/ListViewFromCEO"
-        android:layout_width="326dp"
-        android:layout_height="214dp"
-        android:layout_marginTop="20dp"
-        app:layout_constraintEnd_toEndOf="@+id/CEOSerchWorker"
-        app:layout_constraintHorizontal_bias="0.077"
-        app:layout_constraintStart_toStartOf="@+id/CEOSerchWorker"
-        app:layout_constraintTop_toBottomOf="@+id/CEOSerchWorker" />
+    <Button
+        android:id="@+id/CEOSerch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="24dp"
+        android:onClick="Serch"
+        android:text="Serch"
+        android:textColor="#022170"
+        android:textSize="24sp"
+        app:layout_constraintStart_toStartOf="@+id/ListViewFromCEO"
+        app:layout_constraintTop_toTopOf="@+id/buttonCEOLogout" />
 
     <EditText
         android:id="@+id/CEOSerchWorker"
@@ -86,16 +74,28 @@
         app:layout_constraintStart_toStartOf="@+id/LookAs"
         app:layout_constraintTop_toBottomOf="@+id/LookAs" />
 
-    <Button
-        android:id="@+id/CEOSerch"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:onClick="Serch"
-        android:text="Serch"
-        android:textColor="#022170"
-        android:textSize="24sp"
-        app:layout_constraintStart_toStartOf="@+id/ListViewFromCEO"
-        app:layout_constraintTop_toTopOf="@+id/buttonCEOLogout" />
+    <ListView
+        android:id="@+id/ListViewFromCEO"
+        android:layout_width="326dp"
+        android:layout_height="214dp"
+        android:layout_marginTop="20dp"
+        app:layout_constraintEnd_toEndOf="@+id/CEOSerchWorker"
+        app:layout_constraintHorizontal_bias="0.077"
+        app:layout_constraintStart_toStartOf="@+id/CEOSerchWorker"
+        app:layout_constraintTop_toBottomOf="@+id/CEOSerchWorker" />
+
+    <TextView
+        android:id="@+id/txtCEO"
+        android:layout_width="317dp"
+        android:layout_height="68dp"
+        android:layout_marginTop="4dp"
+        android:gravity="center"
+        android:text="CEO"
+        android:textColor="#F80000"
+        android:textSize="50sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.404"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

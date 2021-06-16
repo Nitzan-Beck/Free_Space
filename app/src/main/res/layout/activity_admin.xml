@@ -24,28 +24,16 @@
         app:layout_constraintTop_toBottomOf="@+id/LookAs" />
 
     <Button
-        android:id="@+id/DataBase"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="100dp"
-        android:text="Go to Data base"
-        android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/txtAdmin"
-        app:layout_constraintHorizontal_bias="0.118"
-        app:layout_constraintStart_toStartOf="@+id/txtAdmin"
-        app:layout_constraintTop_toBottomOf="@+id/txtAdmin" />
-
-    <Button
         android:id="@+id/LookAs"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="76dp"
+        android:layout_marginTop="84dp"
         android:text="Look As....."
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/DataBase"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/DataBase"
-        app:layout_constraintTop_toBottomOf="@+id/DataBase" />
+        app:layout_constraintEnd_toEndOf="@+id/txtAdmin"
+        app:layout_constraintHorizontal_bias="0.035"
+        app:layout_constraintStart_toStartOf="@+id/txtAdmin"
+        app:layout_constraintTop_toBottomOf="@+id/txtAdmin" />
 
     <TextView
         android:id="@+id/txtAdmin"

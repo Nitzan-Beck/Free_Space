@@ -32,7 +32,7 @@ public class Boss extends AppCompatActivity {
     }
 
     public void NewWorker(View view) {
-        Intent i=new Intent(this,SingIn.class);
+        Intent i=new Intent(this,SingUp.class);
         startActivity(i);
     }
 

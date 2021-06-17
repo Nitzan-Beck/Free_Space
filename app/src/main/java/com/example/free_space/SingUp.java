@@ -54,30 +54,21 @@ public class SingUp extends AppCompatActivity {
         String userID = this.myRef.child("Workers").push().getKey();
         assert userID != null;
         myRef.child("Workers").child(userID).setValue(WI);
+/*
+        //block option to add new admin
+        if (!WI.gettype().equals("Admin")){
+            //        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+//        SharedPreferences.Editor editor = pref.edit();
+//
+//        editor.putString("user_id", userID);
 
-        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
-        SharedPreferences.Editor editor = pref.edit();
+//        editor.commit(); // commit changes
 
-        editor.putString("user_id", userID);
-
-        editor.commit(); // commit changes
-
-        //move to Worker\Boss menu
-        if (WI.gettype().equals("Worker"))
-        {
-            Intent i = new Intent(this, Worker.class);
-            startActivity(i);
-        }
-        else if (WI.gettype().equals("Boss"))
-        {
             Intent i = new Intent(this, Boss.class);
             startActivity(i);
-        }
-        else if (WI.gettype().equals("CEO"))
-        {
-            Intent i = new Intent(SingUp.this, CEO.class);
-            startActivity(i);
-        }
+        }*/
+
+
     }
 
     public void GoBack(View view) {

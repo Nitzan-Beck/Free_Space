@@ -27,7 +27,7 @@
         android:id="@+id/NewWorker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="56dp"
+        android:layout_marginTop="60dp"
         android:onClick="NewWorker"
         android:text="New Worker"
         android:textSize="18sp"
@@ -41,6 +41,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="24dp"
+        android:onClick="deleteWorker"
         android:text="Delete Worker"
         android:textSize="18sp"
         app:layout_constraintEnd_toEndOf="@+id/NewWorker"
@@ -52,14 +53,14 @@
         android:id="@+id/LookAsWorker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="60dp"
         android:onClick="LookAsWorker"
         android:text="Look As Worker"
         android:textSize="18sp"
-        app:layout_constraintEnd_toEndOf="@+id/DeletWorker"
+        app:layout_constraintEnd_toEndOf="@+id/workerToDeleteET"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/DeletWorker"
-        app:layout_constraintTop_toBottomOf="@+id/DeletWorker" />
+        app:layout_constraintStart_toStartOf="@+id/workerToDeleteET"
+        app:layout_constraintTop_toBottomOf="@+id/workerToDeleteET" />
 
     <TextView
         android:id="@+id/txtBoss"
@@ -73,4 +74,17 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/workerToDeleteET"
+        android:layout_width="242dp"
+        android:layout_height="44dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
+        android:hint="User ID"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/DeletWorker"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/DeletWorker"
+        app:layout_constraintTop_toBottomOf="@+id/DeletWorker" />
 </androidx.constraintlayout.widget.ConstraintLayout>

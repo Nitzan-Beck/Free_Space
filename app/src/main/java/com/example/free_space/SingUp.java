@@ -54,21 +54,22 @@ public class SingUp extends AppCompatActivity {
         String userID = this.myRef.child("Workers").push().getKey();
         assert userID != null;
         myRef.child("Workers").child(userID).setValue(WI);
-/*
+
         //block option to add new admin
         if (!WI.gettype().equals("Admin")){
-            //        SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
-//        SharedPreferences.Editor editor = pref.edit();
-//
-//        editor.putString("user_id", userID);
+            SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
+            SharedPreferences.Editor editor = pref.edit();
 
-//        editor.commit(); // commit changes
+            editor.putString("user_id", userID);
+
+            editor.commit(); // commit changes
 
             Intent i = new Intent(this, Boss.class);
             startActivity(i);
-        }*/
-
-
+        }
+        else{
+            Toast.makeText(this,"adding new admin is invalid",Toast.LENGTH_LONG).show();
+        }
     }
 
     public void GoBack(View view) {

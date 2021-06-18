@@ -65,20 +65,29 @@ public class SingIn extends AppCompatActivity {
                         editor.commit(); // commit changes
 
                         //move to Worker\Boss menu
-                        if (temp.gettype().equals("Worker"))
-                        {
-                            Intent i = new Intent(SingIn.this, Worker.class);
-                            startActivity(i);
-                        }
-                        else if (temp.gettype().equals("Boss"))
-                        {
-                            Intent i = new Intent(SingIn.this, Boss.class);
-                            startActivity(i);
-                        }
-                        else if (temp.gettype().equals("CEO"))
-                        {
-                            Intent i = new Intent(SingIn.this, CEO.class);
-                            startActivity(i);
+                        switch (temp.gettype()) {
+                            case "Worker": {
+                                Intent i = new Intent(SingIn.this, Worker.class);
+                                startActivity(i);
+                                break;
+                            }
+                            case "Boss": {
+                                Intent i = new Intent(SingIn.this, Boss.class);
+                                startActivity(i);
+                                break;
+                            }
+                            case "CEO": {
+                                Intent i = new Intent(SingIn.this, CEO.class);
+                                startActivity(i);
+                                break;
+                            }
+                            case "Admin": {
+                                Intent i = new Intent(SingIn.this, Admin.class);
+                                startActivity(i);
+                                break;
+                            }
+                            default:
+                                break;
                         }
                     }
                 }

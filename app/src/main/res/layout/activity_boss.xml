@@ -82,6 +82,7 @@
         android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="User ID"
+        android:textColorHint="#000000"
         android:inputType="textPersonName"
         app:layout_constraintEnd_toEndOf="@+id/DeletWorker"
         app:layout_constraintHorizontal_bias="0.0"

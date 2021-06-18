@@ -203,12 +203,4 @@ public class CEO extends AppCompatActivity {
         });
         BuildingList.create().show();
     }
-//    public void displayAllBuildings()
-//    {
-//        final String[] stArry=bMap.keySet().toArray(new String[0]);
-//        for (int i=0; i< stArry.length;i++)
-//        {
-//            Toast.makeText(this,"/n"+stArry[i]+":"+bMap.get(stArry[i]),Toast.LENGTH_LONG).show();
-//        }
-//    }
 }

@@ -6,8 +6,6 @@ public class WorkerItem {
     private String Email;
     private int BuildingNum;
     private String type;
-
-
     private String password;
 
     public WorkerItem() {}

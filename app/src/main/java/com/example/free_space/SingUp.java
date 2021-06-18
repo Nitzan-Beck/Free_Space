@@ -56,7 +56,7 @@ public class SingUp extends AppCompatActivity {
         myRef.child("Workers").child(userID).setValue(WI);
 
         //block option to add new admin
-        if (!WI.gettype().equals("Admin")){
+        if (!WI.gettype().equals("Admin") && !WI.gettype().equals("CEO")){
             SharedPreferences pref = getApplicationContext().getSharedPreferences("MyPref", 0); // 0 - for private mode
             SharedPreferences.Editor editor = pref.edit();
 

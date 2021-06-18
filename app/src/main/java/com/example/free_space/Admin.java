@@ -14,7 +14,6 @@ public class Admin extends AppCompatActivity {
     Button btnLookAs;
     String[] s={"look as worker", "Look as boss", "Look as CEO"};
 
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

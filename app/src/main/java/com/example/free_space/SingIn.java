@@ -40,7 +40,6 @@ public class SingIn extends AppCompatActivity {
         String username = String.valueOf(name.getText());
         String password = String.valueOf(pass.getText());
 
-        // Write a message to the database
         database = FirebaseDatabase.getInstance();
         myRef = database.getReference();
 
@@ -64,7 +63,7 @@ public class SingIn extends AppCompatActivity {
 
                         editor.commit(); // commit changes
 
-                        //move to Worker\Boss menu
+                        //move to Worker\Boss\CEO\Admin menu
                         switch (temp.gettype()) {
                             case "Worker": {
                                 Intent i = new Intent(SingIn.this, Worker.class);

@@ -9,8 +9,8 @@ import android.view.View;
 import android.widget.Button;
 
 public class MainActivity extends AppCompatActivity {
-    Button btn;
-    //@Override
+
+    @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        setContentView(R.layout.activity_main);
@@ -20,13 +20,4 @@ public class MainActivity extends AppCompatActivity {
         Intent i=new Intent(this, SingIn.class);
         startActivity(i);
     }
-
-
-    public void btnSignUp(View view) {
-        Intent i=new Intent(this, SingUp.class);
-        startActivity(i);
-    }
-
-
-
 }
